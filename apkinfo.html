@@ -1,0 +1,67 @@
+<style>
+</style>
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<html>
+<body>
+    <form action="/queenbee/pipeline" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-xs-1 text-right" text-align="right">
+                闪屏:
+            </div>
+            <div class="col-xs-2 text-left">
+                <input type="file" name="splash" /><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 text-right" text-align="right">
+                包名:
+            </div>
+            <div class="col-xs-2 text-left">
+                <input type="text" name="package_name" /><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 text-right" text-align="right">
+                ICON:
+            </div>
+            <div class="col-xs-2 text-left">
+                <input type="file" name="icon" /><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 text-right" text-align="right">
+                LOGO:
+            </div>
+            <div class="col-xs-2 text-left">
+                <input type="file" name="logo" /><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 text-right" text-align="right">
+                应用名:
+            </div>
+            <div class="col-xs-2 text-left">
+                <input type="text" name="apk_name" /><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 text-right" text-align="right">
+                内容源:
+            </div>
+            <div class="col-xs-2 text-left">
+                <input type="text" name="crawl_path" /><br></br>
+            </div>
+        </div>
+        <!--dap_app_key : <input type="text" name="dap_app_key" /><br>
+        crab_app_key : <input type="text" name="crab_app_key" /><br>
+        flurry_app_key : <input type="text" name="flurry_app_key" /><br>-->
+        <div class="row">
+            <div class="col-xs-3 text-right">
+                <input type="submit" class="btn btn-primary" value="Submit" /><br>
+            </div>
+        </div>
+    </form>
+</body> 
+</html>
