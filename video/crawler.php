@@ -59,7 +59,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        配置信息
+        爬虫设置
       </h1>
     </section>
 
@@ -72,47 +72,20 @@
           <div class="box box-primary">
             
             <!-- form start -->
-            <form role="form" action="/queenbee/pipeline" method="post" enctype="multipart/form-data">
+            <form role="form" action="/queenbee/crawler" method="post" enctype="multipart/form-data">
               <div class="box-body">
                 
-                <div class="form-group">
-                  <label for="package_name">包名</label>
-                  <input type="text" class="form-control" id="package_name" name="package_name" placeholder="com.xx">
-                </div>
                 <div class="form-group">
                   <label for="apk_name">应用名</label>
                   <input type="text" class="form-control" id="apk_name" name="apk_name" placeholder="">
                 </div>
                 <div class="form-group">
-                  <label for="crawl_path">内容源</label>
+                  <label for="crawl_path">爬虫源</label>
                   <input type="text" class="form-control" id="crawl_path" name="crawl_path" placeholder="爬虫目标地址">
                 </div>
                 <div class="form-group">
                   <label for="tags">标签名</label>
                   <input type="text" class="form-control" id="tags" name="tags" placeholder="可不填，默认other,多个标签以“；”分隔">
-                </div>
-                <div class="form-group">
-                  <label for="color">主题色调</label>
-                  <input type="text" class="form-control" id="color" name="color" placeholder="配色">
-                </div>
-                <div class="form-group">
-                  <label for="primary_key">第三方KEY</label>
-                  <input type="text" class="form-control" id="primary_key" name="primary_key" placeholder="">
-                </div>
-                <div class="form-group">
-                  <label for="splash">闪屏</label>
-                  <input type="file" id="splash" name="splash">
-                  <p class="help-block">ps:上传图片仅支持PNG</p>
-                </div>
-                <div class="form-group">
-                  <label for="splash">ICON</label>
-                  <input type="file" id="icon" name="icon">
-                  <p class="help-block">ps:上传图片仅支持PNG</p>
-                </div>
-                <div class="form-group">
-                  <label for="logo">LOGO</label>
-                  <input type="file" id="logo" name="logo">
-                  <p class="help-block">ps:上传图片仅支持PNG</p>
                 </div>
               </div>
               <!-- /.box-body -->

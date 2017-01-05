@@ -57,8 +57,11 @@
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar"> 
-        <li><a href="input.html"><span>配置项</span></a></li>
-        <li><a href="package.php"><span>包管理</span></a></li>
+        <ul class="sidebar-menu">
+            <li><a href="input.html"><i class="fa fa-book"></i><span>配置项</span></a></li>
+            <li><a href="package.php"><i class="fa fa-table"></i><span>包管理</span></a></li>
+            <li><a href="crawler.php"><i class="fa fa-book"></i><span>爬虫源配置</span></a></li>
+        </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -75,7 +78,7 @@
     <section class="content">
       <div class="row">
         <!-- left column -->
-        <div class="col-md-6">
+        <div class="col-md-8">
           <!-- general form elements -->
           <!--
           <div class="box-header with-border">
@@ -86,27 +89,27 @@
             <table class="table table-bordered table-hover">
               <thead>
               <tr>
-                  <th>Package Name</th>
+                  <th>Apk Name</th>
                   <th>Download Url</th>
               </tr>
               </thead>
               <tbody>
-              <tr>
                 <?php
                     $dir = "/var/www/pipeline";
                     $domain = "http://54.169.115.248:8083";
                     $handle = opendir($dir."/store");
                     while ( ($filename = readdir($handle)) !== false){
                         if ( $filename != "." && $filename !=".." && is_dir($dir."/store/".$filename)){
-                            $file = "/store/".$filename."/xtueb-video-release.apk";
+                            $file = "/store/".$filename."/xtube-video-release.apk";
                             if (file_exists($dir.$file)){
+                                echo "<tr>";
                                 echo "<td>$filename</td>";
                                 echo "<td>$domain/$file</td>";
+                                echo "</tr>";
                             }
                         }
                     }
                 ?>
-              </tr>
             </tbody>
             </table>
 
