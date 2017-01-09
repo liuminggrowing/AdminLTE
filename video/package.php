@@ -61,6 +61,7 @@
             <li><a href="input.html"><i class="fa fa-book"></i><span>配置项</span></a></li>
             <li><a href="package.php"><i class="fa fa-table"></i><span>包管理</span></a></li>
             <li><a href="crawler.php"><i class="fa fa-book"></i><span>爬虫源配置</span></a></li>
+            <li><a href="plugin.php"><i class="fa fa-book"></i><span>插件管理</span></a></li>
         </ul>
     </section>
     <!-- /.sidebar -->
@@ -104,7 +105,7 @@
                             if (file_exists($dir.$file)){
                                 echo "<tr>";
                                 echo "<td>$filename</td>";
-                                echo "<td>$domain/$file</td>";
+                                echo "<td>$domain$file</td>";
                                 echo "</tr>";
                             }
                         }
