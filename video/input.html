@@ -84,6 +84,41 @@
                   <label for="apk_name">应用名</label>
                   <input type="text" class="form-control" id="apk_name" name="apk_name" placeholder="">
                 </div>
+                <!--添加视频源-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>标签</th>
+                            <th>视频源</th>
+                        </tr>
+                        </thead>
+                        <tbody id="target-tbody">
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                <label for="tags"></label>
+                                <input type="text" class="form-control" id="tags" name="tags" placeholder="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                <label for="crawl_path"></label>
+                                <input type="text" class="form-control" id="crawl_path" name="crawl_path" placeholder="">
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <button type="button" class="btn btn-block btn-success" id="add-input">新增一行</button>
+                    </div>
+                </div>
+                <!--
                 <div class="form-group">
                   <label for="crawl_path">内容源</label>
                   <input type="text" class="form-control" id="crawl_path" name="crawl_path" placeholder="爬虫目标地址">
@@ -92,6 +127,7 @@
                   <label for="tags">标签名</label>
                   <input type="text" class="form-control" id="tags" name="tags" placeholder="可不填，默认other,多个标签以“；”分隔">
                 </div>
+                -->
                 <div class="form-group">
                   <label for="color">主题色调</label>
                   <input type="text" class="form-control" id="color" name="color" placeholder="配色">
@@ -99,6 +135,14 @@
                 <div class="form-group">
                   <label for="primary_key">第三方KEY</label>
                   <input type="text" class="form-control" id="primary_key" name="primary_key" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="flurry_key">FLURRY KEY</label>
+                  <input type="text" class="form-control" id="flurry_key" name="flurry_key" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="crab_key">CRAB KEY</label>
+                  <input type="text" class="form-control" id="crab_key" name="crab_key" placeholder="">
                 </div>
                 <div class="form-group">
                   <label for="splash">闪屏</label>
@@ -115,6 +159,16 @@
                   <input type="file" id="logo" name="logo">
                   <p class="help-block">ps:上传图片仅支持PNG</p>
                 </div>
+                <div class="form-group">
+                  <label for="head-backgroud">首页头部背景图</label>
+                  <input type="file" id="head-background" name="head-background">
+                  <p class="help-block">ps:上传图片仅支持PNG</p>
+                </div>
+                <div class="form-group">
+                  <label for="other-backgroud">其他背景图</label>
+                  <input type="file" id="other-background" name="other-background">
+                  <p class="help-block">ps:上传图片仅支持PNG</p>
+                </div>
               </div>
               <!-- /.box-body -->
 
@@ -128,8 +182,10 @@
     </section>
   </div>
           <!-- /.box -->
+
   <!-- jQuery 2.2.3 -->
 <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- FastClick -->
@@ -146,9 +202,25 @@
 <!-- ChartJS 1.0.1 -->
 <script src="../plugins/chartjs/Chart.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--
 <script src="../dist/js/pages/dashboard2.js"></script>
+-->
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var tid=1;
+    $("#add-input").click(function(){
+        var text = '<tr><td><div class="form-group"><label for="tags'+tid+'"></label><input type="text" class="form-control" id=tags'+tid+' name="tags'+tid+'" placeholder=""></div></td><td><div class="form-group"><label for="crawl_path'+tid+'"></label><input type="text" class="form-control" id="crawl_path'+tid+'" name="crawl_path'+tid+'" placeholder=""></div></td></tr>';
+        $("#target-tbody").append(text);
+        tid++;
+    });
+});
+</script>
+
+
+
 </body>
 </body>
 </html>
